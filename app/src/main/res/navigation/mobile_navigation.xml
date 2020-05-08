@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mye_commerceapplication.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_slideshow2"
+            app:destination="@id/nav_slideshow" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.mye_commerceapplication.ui.gallery.GalleryFragment"
+        android:label="@string/menu_products"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_mod"
+            app:destination="@id/nav_mod" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.mye_commerceapplication.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_profil"
+        tools:layout="@layout/fragment_slideshow"
+        >
+        <argument android:name="phoneSeller"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.mye_commerceapplication.ui.tools.CommandesFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.mye_commerceapplication.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.mye_commerceapplication.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.example.mye_commerceapplication.ui.gallery.AddProductsFragment"
+        android:label="AddProduct"
+        tools:layout="@layout/fragment_add_product"/>
+
+    <fragment
+        android:id="@+id/nav_mod"
+        android:name="com.example.mye_commerceapplication.ui.gallery.ModProductsFragment"
+        android:label="ModProduct"
+        tools:layout="@layout/fragment_mod_product">
+        <argument
+            android:name="idProduct"
+            app:nullable="true"
+            app:argType="string"
+            android:defaultValue="@null" />
+    </fragment>
+
+</navigation>
