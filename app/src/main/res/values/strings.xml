@@ -16,12 +16,13 @@
     <string name="myShop">My Shop</string>
     <string name="logout">Logout</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Accueil</string>
     <string name="menu_products">Mes produits</string>
     <string name="menu_profil">Mon profil</string>
     <string name="menu_tools">Mes ventes</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_share">Communiquer</string>
+    <string name="menu_send">Sortir</string>
+    <string name="title_activity_add_marker_maps">Map</string>
 
     <!-- <string name=""></string>
     <string name=""></string>

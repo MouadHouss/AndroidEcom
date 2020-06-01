@@ -21,14 +21,15 @@
             android:id="@+id/product_image_commande"
             android:layout_width="128dp"
             android:layout_height="119dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/hoodie"
             android:textSize="25sp"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView13"
@@ -64,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="98dp"
             android:text="Date :"
             android:textAlignment="center"
@@ -77,18 +78,15 @@
             card_view:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="4dp"
-            android:text="Total :"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            card_view:layout_constraintBottom_toTopOf="@+id/textView15"
-            card_view:layout_constraintEnd_toStartOf="@+id/price_command"
-            card_view:layout_constraintHorizontal_bias="1.0"
-            card_view:layout_constraintStart_toEndOf="@+id/product_image_commande" />
+            android:id="@+id/date_command"
+            android:layout_width="123dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/adresse_buyer_command" />
 
         <TextView
             android:id="@+id/textView15"
@@ -118,39 +116,14 @@
 
         <TextView
             android:id="@+id/adresse_buyer_command"
-            android:layout_width="124dp"
-            android:layout_height="25dp"
+            android:layout_width="125dp"
+            android:layout_height="59dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
             android:text="TextView"
             android:textAlignment="center"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/num_buyer_command" />
-
-        <TextView
-            android:id="@+id/date_command"
-            android:layout_width="123dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="24dp"
-            android:text="TextView"
-            android:textAlignment="center"
-            card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/adresse_buyer_command" />
-
-        <TextView
-            android:id="@+id/price_command"
-            android:layout_width="86dp"
-            android:layout_height="23dp"
-            android:layout_marginEnd="44dp"
-            android:layout_marginBottom="4dp"
-            android:autoText="false"
-            android:elegantTextHeight="false"
-            android:freezesText="false"
-            android:text="TextView"
-            android:textAlignment="center"
-            card_view:layout_constraintBottom_toTopOf="@+id/status_command"
-            card_view:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/status_command"
@@ -162,6 +135,20 @@
             android:textAlignment="center"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/buttonLivrer"
+            android:layout_width="157dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            android:text="Livrer la commande"
+            android:textSize="10sp"
+            android:background="@drawable/header"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/product_image_commande"
+            card_view:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

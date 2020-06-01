@@ -17,51 +17,56 @@
         android:textAlignment="center"
         android:textStyle="bold"
         />
+
     <EditText
         android:id="@+id/shippement_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
         android:layout_below="@id/txt"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginRight="20dp"
-        android:hint="Yout Name"
 
-        />
+        android:background="@drawable/input"
+
+        android:hint="Yout Name" />
 
     <EditText
         android:id="@+id/shippement_phone_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
         android:layout_below="@id/shippement_name"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/input"
         android:hint="Yout Phone Number"
 
          />
 
     <EditText
         android:id="@+id/shippement_home_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
         android:layout_below="@id/shippement_phone_number"
-        android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/input"
         android:hint="Yout Home Address "
 
         />
 
     <EditText
         android:id="@+id/shippement_city_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
         android:layout_below="@id/shippement_home_address"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:hint="Yout City Name "
+        android:background="@drawable/input"
 
         />
 

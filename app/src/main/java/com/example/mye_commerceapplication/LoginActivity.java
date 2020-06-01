@@ -14,7 +14,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import com.example.mye_commerceapplication.Model.Users;
 import com.example.mye_commerceapplication.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -108,15 +107,10 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this,"Logged Successfully ...",Toast.LENGTH_SHORT).show();
                         loadingDialog.dismiss();
                         //Toast.makeText(LoginActivity.this,"please enter your login",Toast.LENGTH_SHORT).show();
-                        /*
                         Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
                         Prevalent.currentOnlineUser = usersData;
+                        Prevalent.phoneNumber=usersData.getPhone();
                         startActivity(intent);
-
-                         */
-                        Intent mainIntent = new Intent(LoginActivity.this,SellerMainActivity.class);
-                        mainIntent.putExtra("phoneSeller",usersData.getPhone());
-                        startActivity(mainIntent);
                     }
                     else{
                         Toast.makeText(LoginActivity.this,"the phone number or password is wrong ... please try again",Toast.LENGTH_SHORT).show();

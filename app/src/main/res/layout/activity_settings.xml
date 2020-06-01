@@ -82,29 +82,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profile_image_change_btn"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/inputphonenumber"
         android:hint="Phone Number..."
-        android:layout_margin="15dp"
         android:padding="10dp"
-        />
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/settings_full_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/settings_phone_number"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/inputname"
         android:hint="Full Name..."
-        android:layout_margin="15dp"
         android:padding="10dp"
-        />
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/settings_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/settings_full_name"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/inputpassword"
         android:hint="Password ..."
-        android:layout_margin="15dp"
         android:padding="10dp"
-        />
+        android:textAlignment="center" />
 
 </RelativeLayout>

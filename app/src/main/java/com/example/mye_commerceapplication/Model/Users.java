@@ -2,16 +2,17 @@ package com.example.mye_commerceapplication.Model;
 
 public class Users {
 
-    private String name,phone,password;
+    private String name,phone,password,longitude,latitude;
 
     public Users() {
     }
 
-    public Users(String name, String phone, String password) {
-
+    public Users(String name, String phone, String password, String longitude, String latitude) {
         this.name = name;
         this.phone = phone;
         this.password = password;
+        this.longitude = longitude;
+        this.latitude = latitude;
     }
 
     public String getName() {
@@ -36,5 +37,21 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 }

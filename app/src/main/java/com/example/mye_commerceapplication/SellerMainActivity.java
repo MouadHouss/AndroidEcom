@@ -2,6 +2,7 @@ package com.example.mye_commerceapplication;
 
 import android.os.Bundle;
 
+import com.example.mye_commerceapplication.Prevalent.Prevalent;
 import com.example.mye_commerceapplication.ui.gallery.AddProductsFragment;
 import com.example.mye_commerceapplication.ui.gallery.AddProductsViewModel;
 import com.example.mye_commerceapplication.ui.slideshow.SlideshowFragment;
@@ -27,11 +28,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class SellerMainActivity extends AppCompatActivity implements SellerActivityInterface {
 
     private AppBarConfiguration mAppBarConfiguration;
     private String phoneNumber;
+
 
 
     @Override
@@ -43,10 +46,10 @@ public class SellerMainActivity extends AppCompatActivity implements SellerActiv
         FloatingActionButton fab = findViewById(R.id.fab);
 
         Bundle extras = getIntent().getExtras();
-        phoneNumber=extras.getString("phoneSeller");
+        //phoneNumber=extras.getString("phoneSeller");
+        phoneNumber=Prevalent.currentOnlineUser.getPhone();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-
 
         // Passing each menu ID as a set of Ids because each
 
@@ -99,6 +102,9 @@ public class SellerMainActivity extends AppCompatActivity implements SellerActiv
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
     public void switchFragment(int idFrag){
         NavController navController = Navigation.findNavController(SellerMainActivity.this,R.id.nav_host_fragment);
         Bundle bundle = new Bundle();

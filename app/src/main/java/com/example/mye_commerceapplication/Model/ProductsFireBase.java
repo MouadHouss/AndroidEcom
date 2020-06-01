@@ -17,7 +17,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ProductsFireBase {
+public class    ProductsFireBase {
     private FirebaseDatabase mDataBase;
     private DatabaseReference mReferenceProducts;
     private ArrayList<Products> products = new ArrayList<>();

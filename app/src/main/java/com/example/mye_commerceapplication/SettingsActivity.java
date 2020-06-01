@@ -36,13 +36,11 @@ public class SettingsActivity extends AppCompatActivity
     private CircleImageView profileImageView;
     private EditText fullNameEditText, userPhoneEditText, passwordEditText;
     private TextView profileChangeTextBtn,  closeTextBtn, saveTextButton;
-
     private Uri imageUri;
     private String myUrl = "";
     private StorageTask uploadTask;
     private StorageReference storageProfilePrictureRef;
     private String checker = "";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,9 +48,6 @@ public class SettingsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        //storageProfilePrictureRef = FirebaseStorage.getInstance().getReference().child("Profile pictures");
-
-      //  profileImageView = (CircleImageView) findViewById(R.id.settings_profile_image);
         fullNameEditText = (EditText) findViewById(R.id.settings_full_name);
         userPhoneEditText = (EditText) findViewById(R.id.settings_phone_number);
         passwordEditText = (EditText) findViewById(R.id.settings_password);
@@ -60,10 +55,7 @@ public class SettingsActivity extends AppCompatActivity
         closeTextBtn = (TextView) findViewById(R.id.close_settings_btn);
         saveTextButton = (TextView) findViewById(R.id.update_account_settings_btn);
 
-
         userInfoDisplay(fullNameEditText, userPhoneEditText, passwordEditText);
-
-
         closeTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -71,8 +63,6 @@ public class SettingsActivity extends AppCompatActivity
                 finish();
             }
         });
-
-
         saveTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -87,19 +77,6 @@ public class SettingsActivity extends AppCompatActivity
                 }
             }
         });
-
-
-//        profileChangeTextBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view)
-//            {
-//                checker = "clicked";
-//
-//                CropImage.activity(imageUri)
-//                        .setAspectRatio(1, 1)
-//                        .start(SettinsActivity.this);
-//            }
-//        });
 
     }
 

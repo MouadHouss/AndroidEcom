@@ -62,7 +62,6 @@ public class CartActivity extends AppCompatActivity {
                     list_produits_cart_activity.add(p);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 

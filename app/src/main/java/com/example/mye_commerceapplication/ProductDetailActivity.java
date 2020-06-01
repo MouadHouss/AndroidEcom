@@ -1,7 +1,6 @@
 package com.example.mye_commerceapplication;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -21,13 +20,10 @@ import com.example.mye_commerceapplication.Model.Product;
 import com.example.mye_commerceapplication.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
@@ -43,9 +39,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     private  ImageView product_image;
     private ElegantNumberButton numberButton;
     private TextView description_product,name_product,price_product;
-
     private DatabaseReference mRefComment;
-
     private EditText comment_text;
     private Button comment_btn;
     private TextView feedback_text;
@@ -90,7 +84,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                 Date dateComment=new Date();
                 DateFormat dateFormat=new SimpleDateFormat("dd/MM/yy HH:mm:ss");
 
-                if(!TextUtils.isEmpty(comment_text.toString())){
+                if(!TextUtils.isEmpty(comment_text.getText().toString())){
                     Comment comment=new Comment(idCmt,dateFormat.format(dateComment).toString(),comment_text.getText().toString(),Prevalent.currentOnlineUser.getPhone(),productId);
                     mRefComment.child(idCmt).setValue(comment).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
